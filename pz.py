@@ -12,5 +12,6 @@ for i in range(size-1):
             num[j],num[j+1] = num[j+1], num[j]
             count += 1
 
-print(num)  
+print(num)
+print(count)
 
