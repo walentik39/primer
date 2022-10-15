@@ -5,7 +5,7 @@ import time
 
 class My:
     def fun():
-        s = [ i ** 2 for i in [1, 2, 4, 5, 8] if i%2 ==0]
+        s = [ i ** 2 for i in range(12) if i%2 !=0]
         y = []
         for x in s:
             time.sleep(1)
