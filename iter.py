@@ -5,6 +5,7 @@ class A:
     def main_func():
         for n in iter(lambda: random.randrange(10), 7):
             print(n)
+            print(sorted(iter(lambda: random.randrange(10), 7)))
     main_func()
 
 
