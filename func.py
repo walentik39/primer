@@ -10,7 +10,7 @@ def main_func():
         for i in range(10):
             a.append(random.randint(1,55))
             print(sorted(a))
-            print(fsum(a))
+            print(fsum(a), sys.stdout.write("сумма чисел ="))
     return inner_func()
 
 main_func()
