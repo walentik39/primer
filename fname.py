@@ -4,6 +4,6 @@ import os
 import fnmatch
 
 for fname in os.listdir('.'):
-    if fnmath.fnmatch(fname, '*.py'):
+    if fnmatch.fnmatch(fname, '*.py'):
         print(fname)
 
