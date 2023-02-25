@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-sp = [5,7,8,12,9,15]
+import random
+
+sp = [x for x in range(12) ]
 sp1 = []
 for i in sp:
     sp1.append(i ** 2)
