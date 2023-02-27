@@ -14,3 +14,6 @@ while(current_index < size):
         max_number_index = current_index
     current_index = current_index + 1
 print(max)
+for j in range(12):
+    numbers.append(random.randint(1,100))
+    print(sorted(numbers, key=None, reverse=False))
