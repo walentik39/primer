@@ -21,11 +21,14 @@ class A:
 
     def func():
         c = []
-        for k in range(7):
+        d = {}
+        i = 1
+        while i < 6:
             c.append(random.randint(1,99))
-            print(sorted(c))
+            d[i] = c
+            print(d)  
             time.sleep(0.2)
-            print(sum(c))
+            i += 1
 
 
 Thread(target=A.main_func())
