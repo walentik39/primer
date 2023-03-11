@@ -3,7 +3,7 @@ import time
 import turtle
 turtle.shape('turtle')
 turtle.shapesize(2)
-turtle.color('yellow')
+turtle.color('yellow', 'blue')
 
 for step in range(6):
     turtle.begin_fill()
