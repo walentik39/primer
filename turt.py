@@ -16,4 +16,4 @@ for step in range(6):
     turtle.right(60)
     turtle.end_fill()    
 
-#turtle.hide_turtle()
+turtle.hideturtle()
