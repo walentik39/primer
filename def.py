@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-
-numbers = [1, 8, 3, 2, 6]
-size = 5
-current_index = 0
-max_numer_index = 0
-max = numbers[0]
-while(current_index < size):
-    if(numbers[current_index] > max):
-        max = numbers[current_index]
-        max_number_index = current_index
-    current_index = current_index + 1
-print(max)
-print(current_index) #Логическая ошибка, лишняя строчка#
+from tkinter import *
+import turtle
+t=turtle.Turtle()
+for c in ('#220033','red','yellow','blue','orange','green'):
+        for x in ('#bbccfb','green','#440011','#661211','red','black'):
+                t.color(c)
+                t.forward(55)
+                t.left(55)
+                t.circle(22)
+                t.forward(45)
+                t.color(x)
+                t.forward(55)
+                t.left(55)
+                t.circle(33)
+	
