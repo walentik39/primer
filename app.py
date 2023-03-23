@@ -9,6 +9,23 @@ def update_poem():
 def insert_poem():
     print("INSERT")
 
+def get_data():
+    with sqlite3.connect("app.db") as db:
+        db.row_factory = sqlite3.Row
+        cursor = db.cursor()
+        cursor.execute("CREATE TABLE IF NOT EXISTS poems(id INTEGER PRIMARY KEY, poem TEXT NOT NULL)")
+
+        try:
+            cursor.execute("SELECT * FROM poems ORDER BY RANDOM() LIMIT 1")
+        except:
+            return {"id" : 0, "poem":"Ошибка!"}
+        return cursor.fetchone()
+
+data = get_data()
+print(data)
+
+
+
 ctk.set_appearance_mode("system")
 ctk.set_default_color_theme("green")
 
