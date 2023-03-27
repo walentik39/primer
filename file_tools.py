@@ -7,6 +7,6 @@ def f():
         for j in mfile:
             print(j)
     with open('file_tool.md','a') as myfile:
-        x = os.listdir('/usr/home/awp/')
+        x = os.listdir('.')
         myfile.write(str(x))
 f()         
