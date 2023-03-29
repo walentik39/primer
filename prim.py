@@ -18,5 +18,5 @@ while(i<=size - 1):
             print(numbers)
         j = j + 1
     i = i + 1    
-print("Sorted :\t\t", numbers)
+print("Sorted наоборот :\t", sorted(numbers, key=None, reverse=True))
 print(count)
