@@ -1,15 +1,1 @@
-Server:		192.168.100.1
-Address:	192.168.100.1#53
-
-Non-authoritative answer:
-Name:	mail.ru
-Address: 217.69.139.200
-Name:	mail.ru
-Address: 217.69.139.202
-Name:	mail.ru
-Address: 94.100.180.200
-Name:	mail.ru
-Address: 94.100.180.201
-Name:	mail.ru
-Address: 2a00:1148:db00:0:b0b0::1
-
+2023-04-04 22:19:44.8184182023-04-04 22:19:51.0629662023-04-04 22:20:05.783583
