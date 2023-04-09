@@ -4,20 +4,16 @@ import random
 
 class A:
     def main_func():
-        a = []
-        for x in range(12):
-            a.append(random.randint(12, 565))
-            print(sorted(a, key=None, reverse=True))
-            def inner_func():
-                sum1 = 0
-                i = 0
-                n = len(a)
-                for i in a:
-                    sum1 += i
-                    i += 1
-                    average = sum1/n
-                    print(average)
-            return inner_func()
+        a = [i ** 2 for i in range(12,35) if i%2!=0 ]
+        i = 0
+        size = len(a)
+        sum1 = 0
+        while i < size:
+            print(random.choice(a))
+            sum1 += a[i]
+            i += 1
+        average = sum1 / size
+        print(average)
     main_func()
 
 
