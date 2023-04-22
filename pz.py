@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-from random import randint
-with open('test.md','w') as myfile:
+import random 
 
-    num = []
-    size = len(num)
-    count = 0
-    for i in range(15):
-        num.append(randint(0, 500))
+class Num:
+    def main():
+        num = []
+        def two_main():
+            i = 0
+            while i < 7:
+                with open('test.md','a') as myfile:
+                    num.append(random.randint(1,500))
+                    myfile.write(str(num))
+                i += 1
+        return two_main()
+    main()
 
-    for i in range(size-1):
-        for j in range(size-i-1):
-            if num[j] > num[j+1]:
-                num[j],num[j+1] = num[j+1], num[j]
-                count += 1
-                myfile.write(str(count))
-
-print(num)
-print(count)
+if __name__=='__main__':
+    Num
 

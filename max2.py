@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import requests
 
 def max2(x,y):
     if x>y:
