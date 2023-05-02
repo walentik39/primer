@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
 
+import collections
 import requests
-headers = { 
-    "Accept": "*/*", 
-    "Accept-Encoding": "gzip, deflate", 
-    "Host": "httpbin.org", 
-    "User-Agent": "GNU/linux", 
-    }
-response = requests.get("https://httpbin.org/get",headers=headers)
+response = requests.get("https://distrowatch.com")
 
 if response.status_code == 200:
     print("Всё хорошо!")
-print(response.json())
-print(response.json()['headers'])
-
+print(response.headers)
+count = collections.Counter(response.headers)
+print(count)
 if response.ok:
     print("Ok!")
 
