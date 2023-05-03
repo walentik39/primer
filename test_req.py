@@ -2,16 +2,21 @@
 
 import collections
 import requests
-response = requests.get("https://distrowatch.com")
 
-if response.status_code == 200:
-    print("Всё хорошо!")
+headers = {
+        "User - Agent" : "i 2 != 0"
+        }
+
+
+response = requests.get("https://httpbin.org/get",headers=headers,params={'a':'b','c':'d'})
 print(response.headers)
-count = collections.Counter(response.headers)
-print(count)
-if response.ok:
-    print("Ok!")
 
-response = requests.get('https://rambler.ru')
+response = requests.post("https://httpbin.org/post",headers=headers,params={'a':'b','c':'d',10:12},json={'username':'supersecret'})
+print(response.headers)
+
+count = collections.Counter(response.text)
+print(count)
+
+response = requests.post('https://rambler.ru')
 response.raise_for_status()
 print(response.headers)
