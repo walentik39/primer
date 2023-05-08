@@ -5,5 +5,6 @@ def fib(n):
     while a < n:
         print(a, end=' ')
         a, b = b, a + b
+        a += 1
     print()
 fib(int(input("Введите число: ")))
