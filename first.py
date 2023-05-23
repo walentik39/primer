@@ -27,4 +27,3 @@ w1.mainloop()
 w2.mainloop()
 
 
-input()
