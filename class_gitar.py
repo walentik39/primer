@@ -1,23 +1,28 @@
 #!/usr/bin/env python3
 
-class Guitar:
-    def __init__(self):
-        self.n_strings = 6
-        self.play()
-    def play(self):
-        print("pam pam pam pam pam pam pam")
+import random
+class Vector:
+    MIN_COORD = 0
+    MAX_COORD = 100
 
+    @classmethod
+    def validate(cls, arg):
+        return cls.MIN_COORD <= arg <= cls.MAX_COORD
 
-class ElectricGuitar(Guitar):
-    def __init__(self):
-        super().__init__()
-        self.n_strings = 8
-        self.__cost = 50
-    def playLouder(self):
-        print("pam pam pam pam pam pam pam".upper())
+    def __init__(self, x, y):
+        self.x = self.y = 0
+        if self.validate(x) and self.validate(y):
+            self.x = x
+            self.y = y
+        print(self.norm2(self.x, self.y))
 
-my_guitar = ElectricGuitar()
-my_guitar.playLouder()
-print("chile class:",my_guitar.n_strings)
-print("parent class:", Guitar().n_strings)
-print(my_guitar._ElectricGuitar__cost)
+    def get_coord(self):
+        return self.x, self.y
+
+    
+    @staticmethod
+    def norm2(x, y):
+        return x*x + y*y
+
+v = Vector(10, 20)
+print(Vector.norm2(5,6))
