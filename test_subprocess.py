@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import subprocess
+import platform
 
 ip_list = ['8.8.4.4','127.0.1.1','test.me','37.214.18.10','8.8.8.8']
 for ip in ip_list:
@@ -16,3 +17,4 @@ for ip in ip_list:
         print(f"Адрес {ip} пингуется")
     else:
         print(f"адрес {ip} не пингуется")
+print(platform.system())
