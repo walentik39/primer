@@ -5,7 +5,7 @@ from tkinter import *
 
 root = Tk()
 root.title("Построение графика функции x=sin(y)")
-root.geometry("1020x620")
+root.geometry("1020x820")
 canvas = Canvas(root, width=1020, height=620, bg='#002')
 button = Button(None, text='Выход!', bg='#711337', command=quit)
 button.pack()
