@@ -15,7 +15,7 @@ def write_file(filename: str, data: str):
 
 if __name__=='__main__':
     pins = [generate_pin(8) for _ in range(5)]
-    pins_without_fives = replace_fives(pins, '6')
+    pins_without_fives = replace_fives(pins, '2')
     str_list = '\n'.join(pins_without_fives)
-    write_file('test.odt', str_list)
+    write_file('test2.txtt', str_list)
     print(pins_without_fives)
