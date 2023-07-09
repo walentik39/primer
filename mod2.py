@@ -23,4 +23,5 @@ def three_main(name):
 if __name__=='__main__':
     res = three_main(two_main())
     print(''.join(str(res)))
-
+    with open('test.docs','w') as file:
+        file.write(''.join(str(res)))
