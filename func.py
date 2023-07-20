@@ -11,8 +11,18 @@ def main_func():
             a.append(random.randint(1,55))
             print(sorted(a))
             print(fsum(a), sys.stdout.write("сумма чисел ="))
+            with open('wr.docs','w') as file:
+                file.write(str(a))
     return inner_func()
 
-main_func()
+def file_read(name):
+    with open('wr.docs','r') as file:
+        res = file.read()
+        for i in res:
+            print(i,end='')
 
 
+
+if __name__=='__main__':
+    result = file_read(main_func())
+    print(result)
