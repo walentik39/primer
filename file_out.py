@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
-f1 = open('test.odt','r')
-for i in f1:
-    print(i)
-f2 = open('test2.odt','w')
-for line in f1:
-    f2.write(line.upper())
-f1.close()
-f2.close()
+import os
+with open('test.odt','r+') as f1:
+    for i in f1:
+        print(i)
+with open('test2.odt','a') as f2:
+    f2.write(str(os.system('cal > test.odt')))
