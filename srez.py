@@ -9,6 +9,17 @@ def fun():
        print(a)
        a.append(random.randint(12,22))
        i += 1
-fun()
-	
+
+def main_func(name):
+    count = 0
+    for i in range(int(input())+1):
+        count += i
+    return count    
+
+if __name__=='__main__':
+    result = main_func(fun())
+    print(result)
+    result2 = main_func(fun())
+    print(result2)
+
 
