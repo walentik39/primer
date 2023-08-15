@@ -11,7 +11,7 @@ def f():
             f.write(str(dict1))
 
 def sub_():
-    result = subprocess.run(['lsof','-o'],stdout=subprocess.PIPE,
+    result = subprocess.run(['inxi','-w'],stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
                             encoding='utf-8')
     output = result.stdout + result.stderr
@@ -23,8 +23,12 @@ def file_write(file):
 
 def read_file():
     with open('test2.odt','r') as fil:
-        for i in fil:
-            print(i)
+        while 1:
+            l = fil.readline()
+            if not l:
+                break
+            if len(l) > 5:
+                print(l)
 
 if __name__=='__main__':
     file_write(str(sub_()))
