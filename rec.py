@@ -10,8 +10,8 @@ class My:
         for x in s:
             time.sleep(1)
             print(x)
-            y.append(x)
-            print(sorted(y))
+            y.append(x ** 2)
+            print(sorted(y,key=None,reverse=True))
 
 
     def loop1():
