@@ -5,5 +5,5 @@ begin
 	write('a = ');
 	readln(a);
 	res:=a*a*a;
-	writeln('res = ', res);
+	writeln('Куб этого числа = ', res);
 end.

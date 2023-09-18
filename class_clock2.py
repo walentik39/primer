@@ -34,7 +34,7 @@ class Clock:
         sc = self.__verify_data(other)
         return self.seconds <= sc
 
-
-c1 = Clock(1000)
-c2 = Clock(1300)
-print(c1 <= c2)
+if __name__=='__main__':
+    c1 = Clock(1000)
+    c2 = Clock(1300)
+    print(c1 <= c2)
