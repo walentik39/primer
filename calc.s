@@ -1,17 +1,34 @@
 .text
 .global _start
 _start:
-mov $5, %rax
-mov $8, %rbx
+mov $8, %rax
+mov $4, %rbx
+mov $3, %rcx
 
-sub %rax, %rbx
+cmp $1, %rcx
+jne a
+add %rdx, %rax
+jmp z
+
+a:
+
+cmp $2, %rcx
 jne b
+sub %rbx, %rax
+jmp z
 
-a:mov $2, %rdx
-jmp c
-b:mov $1, %rdx
+b:
+cmp $3, %rcx
+jne c
+mul %rbx
+jmp z
+
 c:
+cmp $4, %rcx
+jne z
+div %rbx
 
+z:
 
 //exit
 mov $60, %rax
