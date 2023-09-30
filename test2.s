@@ -1,11 +1,6 @@
 .text
 .global _start
 _start:
-mov $5, %rax
-sub $5, %rax
-mov $8, %rsi
-sub $2, %rsi
-
 //exit
 mov $60, %rax
 mov $0, %rdi
