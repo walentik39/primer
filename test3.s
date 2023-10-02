@@ -3,7 +3,7 @@
 _start:
 
 mov $5, %rax
-mov $5, %rbx
+mov $8, %rbx
 
 sub %rax, %rbx
 je a
