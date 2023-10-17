@@ -4,14 +4,14 @@ import random
 import sys
 from math import *
 
-def fun():
-    for i in range(12):
-        yield i ** 2
+def func():
+    for x in range(random.randint(0,22)):
+        yield x ** 2
 
-
-gen = fun()
-for j in gen:
-    if j%2 !=0:
-        print(j)
-    else:
-        print(sqrt(j))
+if __name__=='__main__':
+    g = func()
+    for z in g:
+        if z%2 !=0:
+            print(z)
+        else:
+            print(sqrt(z))
