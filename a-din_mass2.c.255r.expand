@@ -1,0 +1,449 @@
+
+;; Function main (main, funcdef_no=6, decl_uid=3702, cgraph_uid=7, symbol_order=6)
+
+__attribute__((access ("^1[ ]", )))
+int main (int argc, char * * argv)
+{
+  char * A;
+  int N;
+  int D.3707;
+  int N.0_1;
+  long unsigned int _2;
+  int _9;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  printf ("Enter size of array to create:");
+  scanf ("%d", &N);
+  N.0_1 = N;
+  _2 = (long unsigned int) N.0_1;
+  A_7 = malloc (_2);
+  __builtin_puts (&"Array successfully created:"[0]);
+  _9 = 0;
+  N ={v} {CLOBBER(eol)};
+;;    succ:       3
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+<L1>:
+  return _9;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (N.0_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 7 (A_7 - 7 )
+Partition 9 (_9 - 9 )
+Partition 11 (argc_11(D) - 11 )
+Partition 12 (argv_12(D) - 12 )
+Partition 13 (_13(D) - 13 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (argc_11(D) - 11 )
+Partition 1, base 1 (argv_12(D) - 12 )
+Partition 2, base 2 (_13(D) - 13 )
+
+
+Partition map 
+
+Partition 0 (argc_11(D) - 11 )
+Partition 1 (argv_12(D) - 12 )
+Partition 2 (_13(D) - 13 )
+
+
+Conflict graph:
+
+After sorting:
+Coalesce List:
+
+Partition map 
+
+Partition 0 (argc_11(D) - 11 )
+Partition 1 (argv_12(D) - 12 )
+Partition 2 (_13(D) - 13 )
+
+After Coalescing:
+
+Partition map 
+
+Partition 0 (N.0_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (A_7 - 7 )
+Partition 3 (_9 - 9 )
+Partition 4 (argc_11(D) - 11 )
+Partition 5 (argv_12(D) - 12 )
+Partition 6 (_13(D) - 13 )
+
+__attribute__((access ("^1[ ]", )))
+int main (int argc, char * * argv)
+{
+  char * A;
+  int N;
+  int D.3707;
+  int N.0_1;
+  long unsigned int _2;
+  int _9;
+  int _13(D);
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  printf ("Enter size of array to create:");
+  scanf ("%d", &N);
+  N.0_1 = N;
+  _2 = (long unsigned int) N.0_1;
+  A_7 = malloc (_2);
+  __builtin_puts (&"Array successfully created:"[0]);
+  _9 = 0;
+  N ={v} {CLOBBER(eol)};
+;;    succ:       3
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+<L1>:
+  return _9;
+;;    succ:       EXIT
+
+}
+
+
+Partition 0: size 8 align 8
+	A_7
+Partition 1: size 4 align 4
+	N
+
+;; Generating RTL for gimple basic block 2
+
+;; printf ("Enter size of array to create:");
+
+(insn 8 7 9 (set (reg:DI 86)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f9e5b8bd5a0 *.LC0>)) "din_mass2.c":8:2 -1
+     (nil))
+
+(insn 9 8 10 (set (reg:DI 5 di)
+        (reg:DI 86)) "din_mass2.c":8:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f9e5b8bd5a0 *.LC0>)
+        (nil)))
+
+(insn 10 9 11 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "din_mass2.c":8:2 -1
+     (nil))
+
+(call_insn 11 10 0 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f9e5bb80a00 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":8:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+
+;; scanf ("%d", &N);
+
+(insn 12 11 13 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])))
+            (clobber (reg:CC 17 flags))
+        ]) "din_mass2.c":9:2 -1
+     (nil))
+
+(insn 13 12 14 (set (reg:DI 4 si)
+        (reg:DI 87)) "din_mass2.c":9:2 -1
+     (nil))
+
+(insn 14 13 15 (set (reg:DI 88)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f9e5b8bd630 *.LC1>)) "din_mass2.c":9:2 -1
+     (nil))
+
+(insn 15 14 16 (set (reg:DI 5 di)
+        (reg:DI 88)) "din_mass2.c":9:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f9e5b8bd630 *.LC1>)
+        (nil)))
+
+(insn 16 15 17 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "din_mass2.c":9:2 -1
+     (nil))
+
+(call_insn 17 16 0 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f9e5bb82600 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":9:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+
+;; N.0_1 = N;
+
+(insn 18 17 0 (set (reg:SI 82 [ N.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 N+0 S4 A32])) "din_mass2.c":11:19 -1
+     (nil))
+
+;; _2 = (long unsigned int) N.0_1;
+
+(insn 19 18 0 (set (reg:DI 83 [ _2 ])
+        (sign_extend:DI (reg:SI 82 [ N.0_1 ]))) "din_mass2.c":11:19 -1
+     (nil))
+
+;; A_7 = malloc (_2);
+
+(insn 20 19 21 (set (reg:DI 5 di)
+        (reg:DI 83 [ _2 ])) "din_mass2.c":11:19 -1
+     (nil))
+
+(call_insn 21 20 22 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f9e5bba1200 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":11:19 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+(insn 22 21 23 (set (reg/f:DI 89)
+        (reg:DI 0 ax)) "din_mass2.c":11:19 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 89)
+        (nil)))
+
+(insn 23 22 0 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 A+0 S8 A64])
+        (reg/f:DI 89)) "din_mass2.c":11:19 -1
+     (nil))
+
+;; __builtin_puts (&"Array successfully created:"[0]);
+
+(insn 24 23 25 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f9e5b8bd6c0 *.LC2>)) "din_mass2.c":12:2 -1
+     (nil))
+
+(insn 25 24 26 (set (reg:DI 5 di)
+        (reg:DI 90)) "din_mass2.c":12:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f9e5b8bd6c0 *.LC2>)
+        (nil)))
+
+(call_insn 26 25 0 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f9e5bb82100 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":12:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+
+;; _9 = 0;
+
+(insn 27 26 0 (set (reg:SI 84 [ _9 ])
+        (const_int 0 [0])) "din_mass2.c":14:9 -1
+     (nil))
+
+;; N ={v} {CLOBBER(eol)};
+
+(nil)
+
+;; Generating RTL for gimple basic block 3
+
+;; <L1>:
+
+(code_label 28 27 29 2 (nil) [0 uses])
+
+(note 29 28 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _9;
+
+(insn 30 29 31 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 84 [ _9 ])) "din_mass2.c":15:1 -1
+     (nil))
+
+(jump_insn 31 30 32 (set (pc)
+        (label_ref 0)) "din_mass2.c":15:1 -1
+     (nil))
+
+(barrier 32 31 0)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 4 into block 2...
+Merged blocks 2 and 4.
+Merged 2 and 4 without moving.
+Removing jump 31.
+Merging block 5 into block 2...
+Merged blocks 2 and 5.
+Merged 2 and 5 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 6 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 6, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -36 [0xffffffffffffffdc])) [3 argc+0 S4 A32])
+        (reg:SI 5 di [ argc ])) "din_mass2.c":6:1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [4 argv+0 S8 A64])
+        (reg:DI 4 si [ argv ])) "din_mass2.c":6:1 -1
+     (nil))
+(note 4 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 4 8 2 (parallel [
+            (set (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 D.3711+0 S8 A64])
+                (unspec:DI [
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_SET))
+            (set (scratch:DI)
+                (const_int 0 [0]))
+            (clobber (reg:CC 17 flags))
+        ]) "din_mass2.c":6:1 -1
+     (nil))
+(insn 8 5 9 2 (set (reg:DI 86)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f9e5b8bd5a0 *.LC0>)) "din_mass2.c":8:2 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:DI 5 di)
+        (reg:DI 86)) "din_mass2.c":8:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f9e5b8bd5a0 *.LC0>)
+        (nil)))
+(insn 10 9 11 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "din_mass2.c":8:2 -1
+     (nil))
+(call_insn 11 10 12 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f9e5bb80a00 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":8:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 12 11 13 2 (parallel [
+            (set (reg:DI 87)
+                (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                    (const_int -20 [0xffffffffffffffec])))
+            (clobber (reg:CC 17 flags))
+        ]) "din_mass2.c":9:2 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:DI 4 si)
+        (reg:DI 87)) "din_mass2.c":9:2 -1
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 88)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f9e5b8bd630 *.LC1>)) "din_mass2.c":9:2 -1
+     (nil))
+(insn 15 14 16 2 (set (reg:DI 5 di)
+        (reg:DI 88)) "din_mass2.c":9:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f9e5b8bd630 *.LC1>)
+        (nil)))
+(insn 16 15 17 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "din_mass2.c":9:2 -1
+     (nil))
+(call_insn 17 16 18 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f9e5bb82600 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":9:2 -1
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 18 17 19 2 (set (reg:SI 82 [ N.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [3 N+0 S4 A32])) "din_mass2.c":11:19 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 83 [ _2 ])
+        (sign_extend:DI (reg:SI 82 [ N.0_1 ]))) "din_mass2.c":11:19 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 5 di)
+        (reg:DI 83 [ _2 ])) "din_mass2.c":11:19 -1
+     (nil))
+(call_insn 21 20 22 2 (set (reg:DI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x7f9e5bba1200 malloc>) [0 __builtin_malloc S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":11:19 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 22 21 23 2 (set (reg/f:DI 89)
+        (reg:DI 0 ax)) "din_mass2.c":11:19 -1
+     (expr_list:REG_NOALIAS (reg/f:DI 89)
+        (nil)))
+(insn 23 22 24 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 A+0 S8 A64])
+        (reg/f:DI 89)) "din_mass2.c":11:19 -1
+     (nil))
+(insn 24 23 25 2 (set (reg:DI 90)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f9e5b8bd6c0 *.LC2>)) "din_mass2.c":12:2 -1
+     (nil))
+(insn 25 24 26 2 (set (reg:DI 5 di)
+        (reg:DI 90)) "din_mass2.c":12:2 -1
+     (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f9e5b8bd6c0 *.LC2>)
+        (nil)))
+(call_insn 26 25 27 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x7f9e5bb82100 __builtin_puts>) [0 __builtin_puts S1 A8])
+            (const_int 0 [0]))) "din_mass2.c":12:2 -1
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 27 26 30 2 (set (reg:SI 84 [ _9 ])
+        (const_int 0 [0])) "din_mass2.c":14:9 -1
+     (nil))
+(insn 30 27 34 2 (set (reg:SI 85 [ <retval> ])
+        (reg:SI 84 [ _9 ])) "din_mass2.c":15:1 -1
+     (nil))
+(insn 34 30 35 2 (parallel [
+            (set (reg:CCZ 17 flags)
+                (unspec:CCZ [
+                        (mem/v/f/c:DI (plus:DI (reg/f:DI 77 virtual-stack-vars)
+                                (const_int -8 [0xfffffffffffffff8])) [1 D.3711+0 S8 A64])
+                        (mem/v/f:DI (const_int 40 [0x28]) [0 MEM[(<address-space-1> long unsigned int *)40B]+0 S8 A64 AS1])
+                    ] UNSPEC_SP_TEST))
+            (clobber (scratch:DI))
+        ]) "din_mass2.c":15:1 -1
+     (nil))
+(jump_insn 35 34 42 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 38)
+            (pc))) "din_mass2.c":15:1 -1
+     (nil)
+ -> 38)
+;;  succ:       7
+;;              6 (FALLTHRU)
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 2, next block 7, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 42 35 36 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(call_insn 36 42 37 6 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x7f9e5b8b9900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+        (const_int 0 [0])) "din_mass2.c":15:1 -1
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (expr_list:REG_NORETURN (const_int 0 [0])
+            (expr_list:REG_EH_REGION (const_int 0 [0])
+                (nil))))
+    (nil))
+;;  succ:      
+
+(barrier 37 36 38)
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2
+(code_label 38 37 43 7 3 (nil) [1 uses])
+(note 43 38 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 39 43 40 7 (set (reg/i:SI 0 ax)
+        (reg:SI 85 [ <retval> ])) "din_mass2.c":15:1 -1
+     (nil))
+(insn 40 39 0 7 (use (reg/i:SI 0 ax)) "din_mass2.c":15:1 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+
