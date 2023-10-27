@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistdio.h>
+#include <unistd.h>
 #define ARRAY_LENGTH 10
 
 int main(int argc, const char* argv[])
@@ -19,6 +19,7 @@ int main(int argc, const char* argv[])
 	printf("\n And the average is : ");
 	for(i = 0;i < ARRAY_LENGTH;i++)
 		result += *(arr +i);
+	sleep(3);
 	printf("%f \n", result /ARRAY_LENGTH);
 }
 
