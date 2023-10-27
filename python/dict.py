@@ -4,10 +4,10 @@ import subprocess
 def f():
     dict1 = {}
     a = []
-    for i in range(12):
+    for i in range(5):
         a.append(random.randint(1,22))
         dict1[i] = a
-        with open('test2.odt','a') as f:
+        with open('test1.odt','w') as f:
             f.write(str(dict1))
 
 def sub_():
@@ -33,4 +33,4 @@ def read_file():
 if __name__=='__main__':
     file_write(str(sub_()))
     print(read_file())
-
+    f()
