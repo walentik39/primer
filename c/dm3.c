@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+int main(int argc, char* argv[])
+{
+	srandom(100);
+	int * a = realloc(0, sizeof(int) * 3);
+
+	for (int i = 0; i < 5; i++)
+		printf("a[%d] = %d\n", i, a[i]);
+	free(a);
+	return 0;
+}
