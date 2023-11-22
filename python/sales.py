@@ -10,3 +10,5 @@ def daily_sales_total(*all_sales):
 if __name__=='__main__':
     result = daily_sales_total(12.889, 33.65, 12.5,'90','77')
     print(result)
+    res = sorted(str(result),key=None, reverse=True)
+    print(res)
