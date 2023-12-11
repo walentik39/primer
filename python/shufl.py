@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import random
+import dis
 
 def read_file():
     with open('test.odt','r') as fi:
@@ -23,10 +24,14 @@ def one():
             i += 1
     return main()
 
+def func(name):
+    bytecode = []
+    bytecode.append(dis.dis(name))
 
 
 
 if __name__=='__main__':
-    res = one()
+    one()
     read_file()
+    func(one)               
 
