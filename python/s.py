@@ -6,9 +6,10 @@ class S:
         s = []
         a = []
         for i in range(random.randint(0,9)):
-            s +=[i] 
-            b = random.shuffle(s)
-            a.append((s))
+            s +=[i**i] 
+            b = list(s)
+            random.shuffle(b)
+            a.append((b))
             with open('test.odt','w') as f:
                 f.write(str(a))
     
