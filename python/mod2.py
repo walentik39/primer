@@ -6,7 +6,7 @@ import sys
 import subprocess
 
 def two_main():
-    value = socket.gethostbyname('test.me')
+    value = socket.gethostbyname('freebsd.org')
     def main():
         ip1 = ipaddress.ip_address(value)
         print(ip1,'\n')
