@@ -1,5 +1,7 @@
 #!/usr/local/bin/bash
 
+set -eExu
+
 echo -n "Введите своё имя: "
 read user_name
 
