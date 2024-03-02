@@ -7,9 +7,10 @@ class A:
         def inner_func():
             d = {}
             for i in range(5):
-                a.append(random.randint(1,123))
+                a.append(random.randint(0,i))
+                random.shuffle(a)
                 d = list(d)
-                d.append(sorted(a, key=None, reverse=False))
+                d.append(a)
                 d = tuple(d)
                 print(d)
         return inner_func()
