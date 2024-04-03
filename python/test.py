@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 from math import *
 import sys
-import subprocess
 import random
 import os
-from fractions import Fraction
 import functools
 from tkinter import *
 from tkinter.messagebox import showinfo
