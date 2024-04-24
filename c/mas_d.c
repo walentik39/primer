@@ -9,6 +9,7 @@ int main(void)
 	*(mas+1) = 444;
 	fprintf(stdout,"%d\n",mas[0]);
 	printf("%d\n", mas[1]);
+	free(mas);
 
 	return 0;
 }
