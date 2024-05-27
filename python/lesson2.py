@@ -3,12 +3,12 @@
 import subprocess
 from contextlib import contextmanager
 def fun():
-    result = subprocess.run(['ping','-c2','localhost'],stdout=subprocess.PIPE,
+    result = subprocess.run(['ping','-c2','opennet.ru'],stdout=subprocess.PIPE,
                             stderr=subprocess.DEVNULL,encoding='utf-8')
     return result.stdout
 
 def fun2():
-    result = subprocess.run(['ping6','-c2','localhost'],stdout=subprocess.PIPE,
+    result = subprocess.run(['ping6','-c2','linux.org.ru'],stdout=subprocess.PIPE,
                             stderr=subprocess.DEVNULL,encoding='utf-8')
     return result.stdout
 
@@ -21,12 +21,12 @@ def managed_file(name):
         f.close()
 
 if __name__=='__main__':
-    with managed_file('test.md') as f:
+    with managed_file('test2.md') as f:
         f.write(str(fun()))
         f.write('Пока!')
         f.write(str(fun2()))
         f.write('И снова ПОКА!')
-    with open('test.md','r') as file:
+    with open('test2.md','r') as file:
         res = file.read()
         print(res)
 
