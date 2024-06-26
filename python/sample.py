@@ -5,4 +5,7 @@ import time
 for i in range(12):
     r = random.sample(range(500), 7)
     time.sleep(0.5)
-    print(sorted(r, reverse=True))
+    #print(sorted(r, reverse=True))
+    random.shuffle(r)
+    print(r)
+    #print(sorted(r, reverse=False))
