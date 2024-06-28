@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define ARRAY_LENGTH 10
 
-int main(int argc, const char* argv[])
+int main(void)
 {
 	int arr[ARRAY_LENGTH];
 	int i = 0;
