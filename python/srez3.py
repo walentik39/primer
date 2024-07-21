@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import dis
+
 import random
+import subprocess
 
 def fun():
     a = []
@@ -22,12 +23,16 @@ def read_file():
         i = fi.read()
         print(i)
 
+def convert():
+    res = subprocess.run(['convert','test.odt','test.jpg'],stdout=subprocess.PIPE,
+                         stderr=subprocess.DEVNULL,encoding='utf-8')
+    return res.stdout
+
 if __name__=='__main__':
     with open('test.odt','w') as f:
         f.write(str(fun()))
         f.write(str(main_func()))
     result1 = read_file()
-    dis.dis(fun)
-    dis.dis(main_func)
+    convert()
 
 
