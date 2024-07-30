@@ -4,17 +4,23 @@ import sys
 import subprocess
 import random
 import os
-import dis
 def foo():
     a=float(input("Введите первое число: "))
     b=float(input("Введите второе число: "))
-    res = print("Вычисление среднего значения чисел:",(a + b) /2,'\n' "а корень из чисел",sqrt(a+b))
+    res = ("Вычисление среднего значения чисел:",(a + b) /2, "а корень из чисел",sqrt(a+b))
     return res
 
 def rand():
-    with open('test.md','w') as f:
-        f.write(str(dis.dis(foo)))
-        
+    with open('test.odt','w') as f:
+        f.write(str(foo()))
+
+def convert():
+    a = input('Какой файл выбрали: ')
+    b = input('в какой превратить: ')
+    result = subprocess.run(['convert',a,b],stdout=subprocess.PIPE,
+                            stderr=subprocess.DEVNULL,encoding='utf-8')
+    return result.stdout
 
 if __name__=='__main__':
     rand()
+    convert()
