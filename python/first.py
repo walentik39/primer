@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+
 import math as m
 import os
 import subprocess
@@ -18,6 +18,16 @@ w1 = Tk()
 w1.title("Надо попробовать!")
 w1.geometry("300x300")
 w1.config(bg='#773119')
+
+w2=turtle.Turtle()
+for c in ['yellow','black','green','blue']:
+    w2.color(c)
+    w2.forward(35)
+    w2.left(30)
+    w2.forward(30)
+    w2.left(30)
+    w2.forward(30)
+    w2.left(30)
 
 w2 =Tk()
 w2.title('Привет')
