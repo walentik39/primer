@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
 import subprocess
-
-ip_list = ['8.8.4.4','127.0.1.1','test.me','37.14.18.10','8.8.8.8']
-for ip in ip_list:
-    result = subprocess.run(
-            ['ping','-c','1','-n', ip],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            encoding="utf-8"
-            )
+from sys import argv
+def fun():
+    ip_list = ['0.0.0.0','127.0.1.1','test.me','mail.ru','8.8.8.8']
+    for ip in ip_list:
+        result = subprocess.run(['ping','-c','3',ip],stdout=subprocess.PIPE,
+                                stderr=subprocess.DEVNULL,encoding='utf-8')
     #output = result.stderr + result.stdout
     #print(output)
-    if result.returncode == 0:
-        print(f"Адрес {ip} пингуется")
-    else:
-        print(f"адрес {ip} не пингуется")
+        if result.returncode == 0:
+            print(f"Адрес {ip} пингуется")
+        else:
+            print(f"адрес {ip} не пингуется")
+
+if __name__=='__main__':
+    fun()
