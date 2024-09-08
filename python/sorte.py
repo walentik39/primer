@@ -4,7 +4,7 @@ import random
 import subprocess
 
 def fun():
-    res = subprocess.run(['lsof','-i'],stderr=subprocess.PIPE,
+    res = subprocess.run(['ss','-tulpan'],stderr=subprocess.PIPE,
                          stdout=subprocess.PIPE,encoding='utf-8')
     return res.stdout
 

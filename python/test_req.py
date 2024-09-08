@@ -17,6 +17,6 @@ print(response.headers)
 count = collections.Counter(response.text)
 print(count)
 
-response = requests.post('https://rambler.ru')
+response = requests.post('http://www.freebsd.org')
 response.raise_for_status()
 print(response.headers)

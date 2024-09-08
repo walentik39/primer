@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import subprocess
-from sys import argv
 def fun():
     ip_list = ['0.0.0.0','127.0.1.1','test.me','mail.ru','8.8.8.8']
     for ip in ip_list:
