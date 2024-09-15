@@ -1,0 +1,1 @@
+CompletedProcess(args=['host', 'linux.net'], returncode=0, stdout='linux.net has address 165.22.63.24\nlinux.net mail is handled by 20 mailsec.protonmail.ch.\nlinux.net mail is handled by 10 mail.protonmail.ch.\n', stderr='')
