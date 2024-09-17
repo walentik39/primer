@@ -1,1 +1,1 @@
-CompletedProcess(args=['host', 'localhost'], returncode=0, stdout='localhost has address 127.0.0.1\nlocalhost has IPv6 address ::1\n', stderr='')
+[14, 14, 14, 14, 19, 20]3
