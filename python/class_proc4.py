@@ -2,15 +2,14 @@
 
 import subprocess
 class Process:
-    '''I process . Dont is all.'''
     def __init__(self):
         self.result = []
 
-    
     def pr(self):
         name = input("Введите название хоста: ")
-        self.result = subprocess.run(['traceroute',name],stdout=subprocess.PIPE,
+        self.result = subprocess.run(['host',name],stdout=subprocess.PIPE,
                                      stderr=subprocess.PIPE,encoding='utf-8')
+        return self.result
 
 
     def get(self):
@@ -18,5 +17,5 @@ class Process:
 
 if __name__=='__main__':
     c = Process()
-    c.pr()
-    c.get()
+    with open('test.odt','w') as f:
+        f.write(str(c.pr()))
