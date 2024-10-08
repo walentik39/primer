@@ -1,1 +1,8 @@
-CompletedProcess(args=['host', 'mail.ru'], returncode=0, stdout='mail.ru has address 217.69.139.200\nmail.ru has address 217.69.139.202\nmail.ru has address 94.100.180.200\nmail.ru has address 94.100.180.201\nmail.ru has IPv6 address 2a00:1148:1000:101:5:4:0:200\nmail.ru mail is handled by 10 mxs.mail.ru.\n', stderr='')
+PING mail.ru (217.69.139.202): 56 data bytes
+64 bytes from 217.69.139.202: icmp_seq=0 ttl=52 time=74.649 ms
+64 bytes from 217.69.139.202: icmp_seq=1 ttl=52 time=74.813 ms
+
+--- mail.ru ping statistics ---
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 74.649/74.731/74.813/0.082 ms
+Пока!И снова ПОКА!
