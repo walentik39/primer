@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main(int argc, char* argv[])
+int main(void)
 {
-	printf("#\n");
-	for(int i = 0; i < 1000000000;i++)
-	{
-		;
-	}
-	printf("&\n");
-	EXIT_SUCCESS;
+	for (int i = 0;i <12; ++i)
+		for (int j = i; j > 0; j--)
+		{
+			printf("%d, %d\n",i, j);
+		}
+	printf("Hello , World!\n");
+	return 0;
 }
