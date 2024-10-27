@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, const char* argv[])
+int main(void)
 {
 	int num, rval;
 	printf("Введите число [0,9]: ");
