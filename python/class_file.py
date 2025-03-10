@@ -2,8 +2,8 @@
 
 import subprocess
 def fun():
-    result = subprocess.run(['nmap','localhost'],stdout=subprocess.PIPE,
-                            stderr=subprocess.DEVNULL,shell=True)
+    result = subprocess.run(['arp','rambler.ru'],stdout=subprocess.PIPE,
+                            stderr=subprocess.DEVNULL,encoding='utf-8')
     return result.stdout 
 
 class ManagedFile:
