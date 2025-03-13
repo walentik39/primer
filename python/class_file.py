@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import subprocess
+import random
+import socket
+
 def fun():
     result = subprocess.run(['arp','rambler.ru'],stdout=subprocess.PIPE,
                             stderr=subprocess.DEVNULL,encoding='utf-8')
