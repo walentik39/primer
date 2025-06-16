@@ -4,15 +4,18 @@ import subprocess
 import random
 
 class My:
+    def rand(self):
+        ip = ['openbsd.org','freebsd.org','rambler.ru','linux.org.ru','linux.net']
+        i = random.choice([x for x in ip])
+        return i
+
     def func(self):
-        res = subprocess.run(['netstat','-rn'],stdout=subprocess.PIPE,
+        res = subprocess.run(['nmap',self.rand()],stdout=subprocess.PIPE,
                         stderr=subprocess.DEVNULL,encoding='utf-8')
         return res.stdout
 
     def funcs(self):
-        ip = ['openbsd.org','freebsd.org','rambler.ru','linux.org.ru','linux.net']
-        i = random.choice([x for x in ip])
-        result = subprocess.run(['ping','-c1',i],stdout=subprocess.PIPE,
+        result = subprocess.run(['ping','-c1',self.rand()],stdout=subprocess.PIPE,
                                 stderr=subprocess.PIPE,encoding='utf-8')
         return result.stdout + result.stderr
 

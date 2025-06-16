@@ -1,0 +1,17 @@
+Starting Nmap 7.94 ( https://nmap.org ) at 2025-06-16 13:20 +03
+Nmap scan report for linux.net (165.22.63.24)
+Host is up (0.20s latency).
+rDNS record for 165.22.63.24: my.newsinc.net
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 179.05 seconds
+PING openbsd.org (199.185.178.80): 56 data bytes
+64 bytes from 199.185.178.80: icmp_seq=0 ttl=238 time=177.943 ms
+
+--- openbsd.org ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 177.943/177.943/177.943/0.000 ms
