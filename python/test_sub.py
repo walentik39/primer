@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import random
 import subprocess
 class My:
     def fun(self):
@@ -17,9 +18,13 @@ class My:
             print(f"Адрес {ip} пингуется")
         else:
             print(f"адрес {ip} не пингуется")
+    def fun2(self):
+        with open('test.odt','w') as f:
+            f.write(str(self.fun()))
+        
 
                     
 
 if __name__=='__main__':
     m = My()
-    m.fun()
+    print(m.fun2())
