@@ -18,13 +18,25 @@ class My:
             print(f"Адрес {ip} пингуется")
         else:
             print(f"адрес {ip} не пингуется")
+
+    def fun1(self):
+        res = subprocess.run(['lsof','-i'],stdout=subprocess.PIPE,
+                             stderr=subprocess.DEVNULL,encoding='utf-8')
+        return res.stdout
+
+    def func(self):
+        rest = subprocess.run(['top'],stdout=subprocess.PIPE,
+                              stderr=subprocess.DEVNULL,encoding='utf-8')
+        return rest.stdout
+
     def fun2(self):
         with open('test.odt','w') as f:
-            f.write(str(self.fun()))
+            f.write(str(self.func()))
+            f.write(str(self.fun1()))
         
 
                     
 
 if __name__=='__main__':
     m = My()
-    print(m.fun2())
+    print(m.fun())
