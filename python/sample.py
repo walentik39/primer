@@ -8,4 +8,6 @@ for i in range(12):
     #print(sorted(r, reverse=True))
     random.shuffle(r)
     print(r)
+    r_new = (sorted(r, reverse=False))
+    print(r_new)
     #print(sorted(r, reverse=False))
