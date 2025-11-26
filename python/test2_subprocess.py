@@ -4,7 +4,7 @@ import random
 import subprocess
 class My:
     def rand(self):
-        ip_list = ['12.0.0.0','127.0.1.1','test.me','mail.ru','8.4.4.8']
+        ip_list = ['12.0.0.1','freebsd.org','test.me','mail.ru','8.4.4.8']
         ip = random.choice(ip_list)
         return ip
 
@@ -18,6 +18,13 @@ class My:
         else:
             print(f"адрес не пингуется")
 
+    def mai(self):
+        res = subprocess.run(['nmap', self.rand()], stdout=subprocess.PIPE, text=True,
+                             stderr=subprocess.DEVNULL)
+        with open('test.odt','w') as f:
+            f.write(str(res))
+
 if __name__=='__main__':
     m = My()
     m.fun()
+    m.mai()
