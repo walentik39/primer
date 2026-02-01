@@ -8,10 +8,9 @@ from tkinter import *
 from tkinter.messagebox import showinfo
 class My:
     def foo(self):
-        a=float(input("Введите первое число:"))
-        b=float(input("Введите второе число:"))
+        a = float(input("Введите первое число:"))
+        b = float(input("Введите второе число:"))
         print("Вычисление среднего значения чисел:",(a + b) /2,'\n' "И корня",sqrt(a+b))
-
 
 if __name__=='__main__':
     m = My()
